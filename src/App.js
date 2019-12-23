@@ -9,12 +9,12 @@ import { Layout } from 'antd';
 const { Content, Footer } = Layout;
 
 class App extends Component {
-  constructor(props) {
-      super(props)
-      this.state = {
-          collapsed: false,
-          title: '',
-      };
+    constructor(props) {
+        super(props);
+        this.state = {
+            collapsed: false,
+            title: ''
+        };
     }
     componentWillMount() {
 
@@ -37,7 +37,7 @@ class App extends Component {
     };
     toggle = () => {
         this.setState({
-            collapsed: !this.state.collapsed,
+            collapsed: !this.state.collapsed
         });
     };
     render() {
@@ -57,7 +57,7 @@ class App extends Component {
                             <Routes auth={auth} />
                         </Content>
                         {/* <Footer style={{ textAlign: 'center' }}>
-                          
+
                         </Footer> */}
                     </Layout>
                 </Layout>

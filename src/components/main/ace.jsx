@@ -1,21 +1,21 @@
 import React from 'react';
-import AceEditor from "react-ace";
+import AceEditor from 'react-ace';
 
-import "ace-builds/src-noconflict/ext-language_tools"
-import "ace-builds/src-noconflict/mode-mysql";
-import "ace-builds/src-noconflict/theme-github";
+import 'ace-builds/src-noconflict/ext-language_tools';
+import 'ace-builds/src-noconflict/mode-mysql';
+import 'ace-builds/src-noconflict/theme-github';
 class AceEditorBox extends React.Component {
     constructor(props) {
-      super(props);
-      this.state = {
-          clientHeight:window.innerHeight-65
-      }
+        super(props);
+        this.state = {
+            clientHeight:window.innerHeight-65
+        };
     }
-   
-    
-   
+    componentDidMount(){
+        console.log('init');
+    }
     onChange(v){
-        console.log(v)
+        console.log(v);
     }
     render(){
 
@@ -29,12 +29,12 @@ class AceEditorBox extends React.Component {
                     mode="mysql"
                     theme="github"
                     onChange={this.onChange.bind(this)}
-                    name={"UNIQUE_ID_OF_DIV"+this.props.title}
+                    name={'UNIQUE_ID_OF_DIV'+this.props.title}
                     style={{width:'100%',height:this.state.clientHeight}}
                     editorProps={{ $blockScrolling: true }}
                 />
             </div>
-        )
+        );
     }
 }
 

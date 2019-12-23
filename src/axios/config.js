@@ -21,3 +21,5 @@ const domain = 'http://39.98.215.185:8088';
 // const domain = 'http://127.0.0.1:8088';
 
 export const GEE_HISTORY_LIST = domain+'/api/alarmlog/list';
+
+export const ClickHouseUrl = 'http://ch.mryitao.cn';
