@@ -51,12 +51,22 @@ class Main extends React.Component {
             database: '',
             result_overflow_mode: 'throw',
             readonly: 1,
-            password: '5hc1Zd24',
-            query:'SHOW DATABASES'
-        };
-        db_query(param).then((res)=>{
-            console.log(res);
+            password: '5hc1Zd24'
 
+        };
+        let query = 'SHOW DATABASES FORMAT JSONCompact';
+        db_query(param,query).then((res)=>{
+            console.log(res);
+            let arr = [];
+            res.data.forEach((v,i)=>{
+                arr.push({
+                    title:v[0],
+                    key:v[0]
+                });
+            });
+            this.setState({
+                treeData:arr
+            });
         });
     }
     getClientWidth = () => {

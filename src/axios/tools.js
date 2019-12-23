@@ -2,6 +2,7 @@
 
 import axios from 'axios';
 let query  = {};
+import  qs  from 'qs';
 
 const domain = 'http://39.98.215.185:8088';
 // const domain = 'http://127.0.0.1:8088';
@@ -68,23 +69,25 @@ export const GET = (url, params = {}) => {
  * @param msg       接口异常提示
  * @param headers   接口所需header配置
  */
-export const POST = (url, data = {},header,flag) => {
+export const POST = (url, data = {},query,header,flag) => {
 
     let ruquest;
     if (!data) {
         data = {};
     }
     let headers = {
-        'Content-Type': 'application/json; charset=UTF-8'
+        'Content-Type': 'application/x-www-form-urlencoded'
 
     };
 
+    let uu = qs.stringify(data);
+    url = url +'?'+uu;
 
     return new Promise((resolve, reject) => {
         axios({
             url,
             headers,
-            data: data,
+            data: query,
             method: 'post',
             timeout: 30000
         }).then(function(res) {

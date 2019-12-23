@@ -47,7 +47,8 @@ export const getHistoryList = (param = {}) => GET(config.GEE_HISTORY_LIST,param 
 }).catch(err=>err);
 
 //
-export const db_query = (param = {}) => POST(config.ClickHouseUrl,param ).then(res=>{
+export const db_query = (param = {},query='') => POST(config.ClickHouseUrl,param,query ).then(res=>{
 
     return res;
 }).catch(err=>err);
+
