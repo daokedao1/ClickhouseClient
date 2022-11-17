@@ -72,7 +72,7 @@
     "react-app-polyfill": "^0.1.3",
     "react-beautiful-dnd": "^11.0.3",
     "react-color": "^2.14.1",
-    "react-dev-utils": "^6.0.4",
+    "react-dev-utils": "^12.0.1",
     "react-document-title": "^2.0.3",
     "react-dom": "^16.8.6",
     "react-draft-wysiwyg": "^1.12.13",
@@ -179,7 +179,7 @@
     "@babel/plugin-proposal-decorators": "^7.4.4",
     "eslint-plugin-react-hooks": "^1.6.0",
     "webpack": "^4.39.3",
-    "webpack-cli": "^3.3.8"
+    "webpack-cli": "^3.3.12"
   },
   "proxy": "http://ch.mryitao.cn/"
 }
